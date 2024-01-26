@@ -12,15 +12,15 @@
 		
  */
  
-`timescale 1ns/100ps												// Establece la escala de tiempo
+`timescale 1ns/100ps													// Establece la escala de tiempo
  
- module Decodificador_Binario_Decimal_Testbench();					// Crea el módulo del testbench
+ module Decodificador_Binario_Decimal_Testbench();									// Crea el módulo del testbench
 		reg [3:0] A;												// Declara la variable de entrada tipo reg de cuatro localidades
 		wire [6:0] S;												// Declara la variable de salida tipo wire de siete localidades
 		
-		Decodificador_Binario_Decimal tbd(A,S);						// Se hace la instanciación del módulo del decodificador
+		Decodificador_Binario_Decimal tbd(A,S);									// Se hace la instanciación del módulo del decodificador
 		
-		initial 													// Inicio
+		initial 												// Inicio
 		begin
 			
 				A = 4'b0000;										// Numero 0
