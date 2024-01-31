@@ -8,23 +8,23 @@
 		Versión: 1.0
 		
 */
-`timescale 1ns/100ps													// Establece la escala de tiempo del testbench
+`timescale 1ns/100ps												// Establece la escala de tiempo del testbench
 
 module Alu_Testbench();												// Crea la señal de entrada A de cuatro bits como tipo reg
 	reg [3:0] A;		
-	reg [3:0] B;														// Crea la señal de entrada B de cuatro bits como tipo reg												
-	reg [3:0] sel;														// Crea la señal de entrada del selector de cuatro bits como tipo reg														
-	wire [3:0] res;													// Crea la señal de salida RES de cuatro bits como tipo reg
+	reg [3:0] B;												// Crea la señal de entrada B de cuatro bits como tipo reg												
+	reg [3:0] sel;												// Crea la señal de entrada del selector de cuatro bits como tipo reg														
+	wire [3:0] res;												// Crea la señal de salida RES de cuatro bits como tipo reg
 	
 	Alu Alutb(A,B,sel,res);											// Establece la instanciación del módulo Alu y relaciona los valores
 	
-	initial																// Comienzo
+	initial													// Comienzo
 	begin
-			A = 4'b0100;												// Valor asignado a la señal de entrada A
-			B = 4'b0110;												// Valor asignado a la señal de entrada B
+			A = 4'b0100;										// Valor asignado a la señal de entrada A
+			B = 4'b0110;										// Valor asignado a la señal de entrada B
 			
-			sel = 4'b0000;												// Valor del selector
-			#100;															// Retardo asignado para cambiar el valor del selector
+			sel = 4'b0000;										// Valor del selector
+			#100;											// Retardo asignado para cambiar el valor del selector
 			sel = 4'b0001;
 			#100;
 			sel = 4'b0010;
@@ -50,7 +50,7 @@ module Alu_Testbench();												// Crea la señal de entrada A de cuatro bits
 			sel = 4'b1100;
 			#100;
 			
-	end																	// Fin
+	end														// Fin
 	
-endmodule																// Fin del módulo
+endmodule														// Fin del módulo
 	
