@@ -10,13 +10,13 @@
 */
 `timescale 1ns/100ps												// Establece la escala de tiempo del testbench
 
-module Alu_Testbench();												// Crea la señal de entrada A de cuatro bits como tipo reg
+module Alu_Testbench();												// Creación de variables de tipo reg
 	reg [3:0] A;		
-	reg [3:0] B;												// Crea la señal de entrada B de cuatro bits como tipo reg												
-	reg [3:0] sel;												// Crea la señal de entrada del selector de cuatro bits como tipo reg														
-	wire [3:0] res;												// Crea la señal de salida RES de cuatro bits como tipo reg
+	reg [3:0] B;																								
+	reg [3:0] sel;																									
+	wire [3:0] res;												
 	
-	Alu Alutb(A,B,sel,res);											// Establece la instanciación del módulo Alu y relaciona los valores
+	Alu Alutb(.A(A), .B(B), .sel(sel), .res(res));								// Establece la instanciación del módulo Alu y relaciona los valores
 	
 	initial													// Comienzo
 	begin
