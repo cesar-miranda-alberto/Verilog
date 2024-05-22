@@ -13,7 +13,7 @@ module Medio_Sumador_Testbench();									  			  // Crea y Asigna nombre al mód
 	reg A,B;														  // Crean las variables de entrada de tipo reg
 	wire Sa,Cs;														  // Crean las variables de salida de tipo wire
 	
-	Medio_Sumador_Testbench tbms(A,B,Sa,Cs);						 				  // Instanciación del módulo medio sumador con sus respectivas variables
+	Medio_Sumador_Testbench tbms(.A(A), .B(B), .Sa(Sa), .Cs(Cs));						 		  // Instanciación del módulo medio sumador con sus respectivas variables
 	
 	initial 														  // Comienzo
 	begin												
