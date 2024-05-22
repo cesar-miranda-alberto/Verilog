@@ -8,11 +8,11 @@
 		Versión: 1.0
 */
 
-module Decodificador_Binario_Hexadecimal(							
+module Decodificador_Binario_Hexadecimal(							// Creación del módulo				
 		input [3:0] A,									// Declaración de variable de entrada de cuatro bits
 		output reg [6:0] S);								// Declaración de variable de salida de siete bits
 
-		always @(A)
+	always @(A)										// Inicio de lista sensible
 		begin
 
 	case (A)										// Inicio del case con respecto a la entrada A
