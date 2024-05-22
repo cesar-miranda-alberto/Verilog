@@ -4,7 +4,7 @@
 		El presente código implementa el desarrollo de un testbench para analizar el funcionamiento
 		de un decodificador binario a decimal cuyos valores serán exhibidos en un display 7 segmentos
 		de cátodo común a través de un FPGA de manera física, se hace esta mención ya que al momento 
-		de relizar el testbench los valores mostrados no serán los valores en decimal sino que serán
+		de relizar el testbench los valores mostrados no serán los valores en hexadecimal sino que serán
 		los valores necesarios para poder formar el número en el display 7 segmentos.
 		
 		Fecha: 21-Marzo-2023
@@ -18,42 +18,42 @@
 		reg [3:0] A;												// Declara la variable de entrada tipo reg de cuatro localidades
 		wire [6:0] S;												// Declara la variable de salida tipo wire de siete localidades
 		
-		Decodificador_Binario_Hexadecimal tbd(A,S);								// Se hace la instanciación del módulo del decodificador
+	 Decodificador_Binario_Hexadecimal tbd(.A(A), .S(S));								// Se hace la instanciación del módulo del decodificador
 		
 		initial 												// Inicio
 		begin
 			
-				A = 4'b0000;										// Numero 0
+				A = 4'b0000;										// Valor en el selector
 				#100;										        // RETARDOS
-				A = 4'b0001;										// Numero 1
+				A = 4'b0001;										
 				#100;
-				A = 4'b0010;										// Numero 2
+				A = 4'b0010;										
 				#100;
-				A = 4'b0011;										// Numero 3
+				A = 4'b0011;										
 				#100;
-				A = 4'b0100; 										// Numero 4
+				A = 4'b0100; 										
 				#100;
-				A = 4'b0101;										// Numero 5
+				A = 4'b0101;										
 				#100;
-				A = 4'b0110;										// Numero 6
+				A = 4'b0110;										
 				#100;
-				A = 4'b0111;										// Numero 7
+				A = 4'b0111;										
 				#100;
-				A = 4'b1000;										// Numero 8
+				A = 4'b1000;										
 				#100;
-				A = 4'b1001;										// Numero 9
+				A = 4'b1001;										
 				#100;
-				A = 4'b1010;										// Letra A
+				A = 4'b1010;										
 				#100;	
-				A = 4'b1011;										// Letra B
+				A = 4'b1011;										
 				#100;
-				A = 4'b1100;										// Letra C
+				A = 4'b1100;										
 				#100;
-				A = 4'b1101;										// Letra D
+				A = 4'b1101;										
 				#100;
-				A = 4'b1110;										// Letra E
+				A = 4'b1110;										
 				#100;
-				A = 4'b1111;										// Letra F
+				A = 4'b1111;										
 				
 end															// Fin
 
