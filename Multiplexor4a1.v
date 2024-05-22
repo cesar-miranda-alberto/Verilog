@@ -26,6 +26,6 @@ module Multiplexor4a1(											// Creación del módulo
 					2'b11 : B = A[3];
 					default : B = A[0];						// Valor asignado por default a la salida
 			endcase										// Fin de los casos
-	end												// Fin de la lista sensitiva
+	end												// Fin de la lista sensible
 	
 endmodule 												// Fin del módulo
