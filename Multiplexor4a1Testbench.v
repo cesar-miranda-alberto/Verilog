@@ -17,7 +17,7 @@ module Multiplexor4a1Testbench();								// Crea el módulo para el testbench
 			wire B;									// Declara la salida B como tipo wire
 				
 			
-			Multiplexor4a1 tbm(A,sel,B);						// Crea la instanciación del módulo del multiplexor
+	Multiplexor4a1 tbm(.A(A), .sel(sel), .B(B));						// Crea la instanciación del módulo del multiplexor
 			
 			initial									// Inicio
 			begin
